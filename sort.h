@@ -1,6 +1,7 @@
 #ifndef SORT_HEADER
 #define SORT_HEADER
 
+#define UNUSED(x) (void)(x)
 #include <stdio.h>
 typedef struct listint_s
 {
