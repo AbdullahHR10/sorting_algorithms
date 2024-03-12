@@ -18,10 +18,10 @@ void swap(int *x, int *y)
 }
 
 /**
- * partition - Helper function for quicksort_recursion to partition the array.
- * @array: Pointer to the array to be partitioned.
- * @low: The index of the first element in the array.
- * @high: The index of the last element in the array.
+ * partition - Helper function for quicksort_recursion to partition the array
+ * @array: Pointer to the array to be partitioned
+ * @low: The index of the first element in the array
+ * @high: The index of the last element in the array
  *
  * Return: The index of the pivot element
  */
@@ -43,7 +43,8 @@ int partition(int *array, int low, int high)
 	return (i);
 }
 /**
- * quicksort_recursion - Sorts an array using the Quicksort algorithm recursively
+ * quicksort_recursion - Sorts an array
+ * Using the Quicksort algorithm recursively
  * @array: Pointer to the array to be sorted
  * @low: The index of the first element in the array
  * @high: The index of the last element in the array
