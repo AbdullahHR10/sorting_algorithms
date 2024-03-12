@@ -18,26 +18,6 @@ void swap(int *x, int *y)
 }
 
 /**
- * quicksort_recursion - Sorts an array using the Quicksort algorithm recursively
- * @array: Pointer to the array to be sorted
- * @low: The index of the first element in the array
- * @high: The index of the last element in the array
- *
- * Return: Nothing
- */
-
-void quicksort_recursion(int *array, int low, int high)
-{
-	int pivot_index;
-
-	if (low < high)
-	{
-		pivot_index = partition(array, low, high);
-		quicksort_recursion(array, low, pivot_index - 1);
-		quicksort_recursion(array, pivot_index + 1, high);
-	}
-}
-/**
  * partition - Helper function for quicksort_recursion to partition the array.
  * @array: Pointer to the array to be partitioned.
  * @low: The index of the first element in the array.
@@ -63,6 +43,26 @@ int partition(int *array, int low, int high)
 	return (i);
 }
 /**
+ * quicksort_recursion - Sorts an array using the Quicksort algorithm recursively
+ * @array: Pointer to the array to be sorted
+ * @low: The index of the first element in the array
+ * @high: The index of the last element in the array
+ *
+ * Return: Nothing
+ */
+
+void quicksort_recursion(int *array, int low, int high)
+{
+	int pivot_index;
+
+	if (low < high)
+	{
+		pivot_index = partition(array, low, high);
+		quicksort_recursion(array, low, pivot_index - 1);
+		quicksort_recursion(array, pivot_index + 1, high);
+	}
+}
+/**
  * quick_sort - Sorts an array of integers in ascending order
  * Using the Quick sort algorithm
  * @array: Array to be sorted
@@ -73,5 +73,5 @@ int partition(int *array, int low, int high)
 
 void quick_sort(int *array, size_t size)
 {
-	quicksort_recursion(array, 0, size - 1)
+	quicksort_recursion(array, 0, size - 1);
 }
