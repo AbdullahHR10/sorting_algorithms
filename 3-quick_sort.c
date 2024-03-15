@@ -2,19 +2,20 @@
 
 /**
  * swap - swaps 2 values
+ * @array: Array to be sorted
  * @x: Value to be swapped
  * @y: Value to be swapped
  *
  * Return: Nothing
  */
 
-void swap(int *x, int *y)
+void swap(int *array, ssize_t x, ssize_t y)
 {
-	int temp;
+	int tmp;
 
-	temp = *x;
-	*x = *y;
-	*y = temp;
+	tmp = array[x];
+	array[x] = array[y];
+	array[y] = tmp;
 }
 
 /**
@@ -25,7 +26,7 @@ void swap(int *x, int *y)
  *
  * Return: The index of the pivot element
  */
-int partition(int *array, int low, int high)
+int partition(int *array, size_t low, size_t high)
 {
 	int pivot_value, i, j;
 
@@ -52,7 +53,7 @@ int partition(int *array, int low, int high)
  * Return: Nothing
  */
 
-void quicksort_recursion(int *array, int low, int high)
+void quicksort_recursion(int *array, size_t low, size_t high)
 {
 	int pivot_index;
 
